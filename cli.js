@@ -8,7 +8,7 @@ if (process.argv.length != 4) {
 var generalized = corpus(process.argv[2]);
 var domain = corpus(process.argv[3]);
 
-Toolkit = new Toolkit(generalized, domain);
+var toolkit = new Toolkit(generalized, domain);
 
 var readline = require('readline').createInterface(process.stdin, process.stdout);
 
@@ -17,10 +17,12 @@ readline.prompt();
 
 readline.on('line', function(line) {
   var word = line.trim();
+
   try {
-    console.log(Toolkit.guess(word));
+    console.log(toolkit.guess(word));
   } catch (e) {
     console.log('No correction found for ' + word);
   }
+
   readline.prompt();
 });

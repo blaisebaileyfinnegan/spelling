@@ -11,5 +11,7 @@
   },
   "author": "Michael Vu",
   "license": "BSD-2-Clause",
-  "dependencies": {}
+  "dependencies": {
+    "restify": "~2.6.0"
+  }
 }
