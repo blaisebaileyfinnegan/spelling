@@ -1,0 +1,16 @@
+{
+  "name": "bio_scraper",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "request": "~2.27.0",
+    "cheerio": "~0.12.3",
+    "async": "~0.2.9"
+  }
+}
