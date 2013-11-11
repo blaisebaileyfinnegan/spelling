@@ -37,7 +37,7 @@ supersequence starts with the input, etc.
 node cli
 ```
 
-3. Try it out:
+### Try it out:
 
 ```
 > bio
