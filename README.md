@@ -1,7 +1,8 @@
 spelling
 ========
 
-Context-based spelling corrector, where the input word only has deleted characters.
+Context-based spelling corrector, where the input word only has deleted characters. The default
+installation is based on a biological context.
 
 Important: This assumes that the incorrectly spelled words are simply spliced!
 This was written in an attempt to correct words in UCI's course titles on
@@ -26,6 +27,18 @@ My program will only enumerate possible corrections which are a supersequence of
 input. Each will then be ranked according to a couple factors: insertion distance,
 frequency, whether the word is in the specialized or generalized dictionary, if the
 supersequence starts with the input, etc.
+
+The method works okay right now. The training data matters a lot--finding where to obtain
+the right vocabulary is the key to making this work great as opposed to okay.
+
+## Structure
+
+```
+./spec - Unit tests. Read this for the best understanding.
+./cli.js - Command line runner, so you can run it
+./server.js - REST server, so you can get corrections
+./tools/bio_scraper - Scraper for a bio glossary site
+```
 
 
 ## Instructions
