@@ -28,7 +28,11 @@ input. Each will then be ranked according to a couple factors: insertion distanc
 frequency, whether the word is in the specialized or generalized dictionary, if the
 supersequence starts with the input, etc.
 
-The method works okay right now. The training data matters a lot--finding where to obtain
+The method works okay right now. With select data, the unit tests will correctly
+guess the right word 80% of the time. There may be errors involving plural forms
+of words, such as if `cl` evalutes to `cells` instead of `cell`.
+
+The training data matters a lot--finding where to obtain
 the right vocabulary is the key to making this work great as opposed to okay.
 
 ## Structure
@@ -47,8 +51,10 @@ the right vocabulary is the key to making this work great as opposed to okay.
 2. Run:
 
 ```
-node cli
+node cli training_data/big.txt training_data/biology.txt
 ```
+
+Type stuff and press enter.
 
 ### Try it out:
 
